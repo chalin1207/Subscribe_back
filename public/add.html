@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+个人用户注册：
+<form action="/RegistrPersonalUser" method="post">
+<input type="text" name="username" />
+<input type="text" name="password" />
+<input type="text" name="personalname" />
+<button type="submit" >提交</button>
+</form>
+企业用户注册：
+<form action="/RegistrCompanyUser" method="post">
+<input type="text" name="username" />
+<input type="text" name="password" />
+<input type="text" name="companyname" />
+<button type="submit" >提交</button>
+</form>
+
+企业用户登录：
+<form action="/LoginCompanyUser" method="post">
+<input type="text" name="username" />
+<input type="text" name="password" />
+<button type="submit" >提交</button>
+</form>
+
+个人用户登录：
+<form action="/LoginPersonalUser" method="post">
+<input type="text" name="username" />
+<input type="text" name="password" />
+<button type="submit" >提交</button>
+</form>
+
+企业用户的业务定制：
+<form action="/CompanyCustomization" method="post">
+<input type="text" name="companyname" />
+<input type="text" name="hallnum" />
+<input type="text" name="roomnum" />
+<input type="text" name="starttime" />
+<input type="text" name="endtime" />
+<button type="submit" >提交</button>
+</form>
+
+人员定制：
+<form action="/CustomCompanyUser" method="post">
+<input type="text" name="username" />
+<input type="text" name="password" />
+<input type="text" name="companyname" />
+<input type="text" name="root" />
+<button type="submit" >提交</button>
+</form>
+
+测试：
+<form action="/test" method="post">
+
+<input type="text" name="companyname" />
+<button type="submit" >提交</button>
+</form>
+
+返回企业信息列表：
+<form action="/GetCompanyMessList" method="post">
+<input type="text" name="time" />
+<button type="submit" >提交</button>
+</form>
+
+根据企业用户查找公司名称：
+<form action="/GetCompanyName" method="post">
+
+<input type="text" name="username" />
+<button type="submit" >提交</button>
+</form>
+
+根据个人用户查找身份名称：
+<form action="/GetPersonalName" method="post">
+
+<input type="text" name="username" />
+<button type="submit" >提交</button>
+</form>
+
+根据企业用户查询房间,大厅预约数：
+<form action="/GetCompanyCountNum" method="post">
+
+<input type="text" name="companyuser" />
+<input type="text" name="orderwhere" />
+<button type="submit" >提交</button>
+</form>
+
+根据企业名称查找总订单数：
+<form action="/GetCompanyFromOrder" method="post">
+<input type="text" name="companyname" />
+<button type="submit" >提交</button>
+</form>
+
+预约叫号:
+<form action="/PersonalSubscribe" method="post">
+
+个人身份名：<input type="text" name="personalname" />
+个人用户名：<input type="text" name="personalusername" />
+企业名称  ：<input type="text" name="companyname" />
+预约时间：<input type="text" name="ordertime" />
+预约号：<input type="text" name="orderid" />
+预约地点：<input type="text" name="orderwhere" />
+
+<button type="submit" >提交</button>
+</form>
+
+企业删除订单:
+<form action="/DeletePersonalOrder" method="post">
+个人用户名：<input type="text" name="personalusername" />
+企业名称  ：<input type="text" name="companyname" />
+预约地点：<input type="text" name="orderwhere" />
+企业用户名：<input type="text" name="companyusername" />
+<button type="submit" >提交</button>
+</form>
+
+获得企业订单列表:
+<form action="/GetOrderIdList" method="post">
+企业名称  ：<input type="text" name="companyname" />
+预约地点：<input type="text" name="orderwhere" />
+<button type="submit" >提交</button>
+</form>
+
+根据用户名获得企业信息列表:
+<form action="/GetOrderCheckList" method="post">
+用户名 ：<input type="text" name="personaluser" />
+<button type="submit" >提交</button>
+</form>
+
+广播:
+<form action="/testBroadcast" method="post">
+公司名 ：<input type="text" name="CompanyName" />
+叫号 ：<input type="text" name="CurrentNo" />
+地点 ：<input type="text" name="OrderWhere" />
+<button type="submit" >提交</button>
+</form>
+
+实时跟新叫号数据:
+<form action="/SaveCallnumberMess" method="post">
+现在的号码 ：<input type="text" name="nownumber" />
+公司名称 ：<input type="text" name="companyname" />
+预约地方 ：<input type="text" name="orderwhere" />
+现在个数：<input type="text" name="nownum" />
+<button type="submit" >提交</button>
+</form>
+
+获得叫号当前个数:
+<form action="/GetCallNum" method="post">
+
+公司名称 ：<input type="text" name="companyname" />
+预约地方 ：<input type="text" name="orderwhere" />
+
+<button type="submit" >提交</button>
+</form>
+
+
+获得叫号当前号数:
+<form action="/GetCallNumber" method="post">
+
+公司名称 ：<input type="text" name="companyname" />
+预约地方 ：<input type="text" name="orderwhere" />
+
+<button type="submit" >提交</button>
+</form>
+</body>
+</html>
